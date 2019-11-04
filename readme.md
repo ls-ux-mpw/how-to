@@ -16,7 +16,7 @@ $("#roll-cover").on('click', function()
 });
 ```
 
-The first selector calls the `id` tied to the link that you want to use to bring up your chosen content. From there, your content goes into the `.html()` method in this function. For images, you can use the template above, keeping in mind the `.html()` method's way of ![creating multi-line strings](https://stackoverflow.com/questions/8676990/multiple-lines-when-using-jquerys-html-method/8677092#8677092). Videos use the following format:
+The first selector calls the `id` tied to the link that you want to use to bring up your chosen content. From there, your content goes into the `.html()` method in this function. For images, you can use the template above, keeping in mind the `.html()` method's way of [creating multi-line strings](https://stackoverflow.com/questions/8676990/multiple-lines-when-using-jquerys-html-method/8677092#8677092). Videos use the following format:
 
 ```js
 $("#sac-fluffing").on('click', function()
