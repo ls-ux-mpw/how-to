@@ -29,7 +29,7 @@ $("#sac-fluffing").on('click', function()
 ```
 
 ## URL-Based Functions
-At the bottom of the code is a script that performs different functions based on what's typed into a url suffix -- in this case, if you add `?dc=` then a parameter name, it automatically clicks on a different page element depending on the parameter name. For example, according to the code below, if you type `https://www.lovesac.com/how-to?dc=sactionals-cover`, the page will open, then the "Covering Your Sactionals" link will be clicked the second the page loads.
+At the bottom of the code is a separate script that performs different functions based on what's typed into a url suffix -- in this case, if you add `?dc=` then a parameter name, it automatically clicks on a different page element depending on the parameter name. For example, according to the code below, if you type `https://www.lovesac.com/how-to?dc=sactionals-cover`, the page will open, then the "Covering Your Sactionals" link will be clicked the second the page loads.
 ```js
 if (dynamicContent == 'sactionals-cover') {
 
@@ -49,4 +49,6 @@ if (dynamicContent == 'sactionals-cover') {
   
 }
 ```
-Adding more dynamic content just involves adding another `else if` to the conditional statement. Just copy and paste in an existing one after the closing bracket of the previous part of the conditional, change the `dynamicContent == '{whatever}'` to a name of your choice (kebab-case please), and change the selector tied to its `.click()` method to the link ID of your choice.
+Adding more url-based functions just involves adding another `else if` to the conditional statement. Just copy and paste in an existing one after the closing bracket of the previous part of the conditional, change the `dynamicContent == '{whatever}'` to a name of your choice (kebab-case please), and change the selector tied to its `.click()` method to the link ID of your choice. Additionally or alternatively, feel free to ditch the `.click()` method and replace it with any JavaScript or jQuery you want!
+
+You can add this script tag to any custom page on our site if you need to add url-dependent JS -- this comes in handy when trying to create links from emails or social ads. Just be sure to copy and paste the entire script, not just this conditional.
