@@ -27,3 +27,26 @@ $("#sac-fluffing").on('click', function()
   );
 });
 ```
+
+## URL-Based Functions
+At the bottom of the code is a script that performs different functions based on what's typed into a url suffix -- in this case, if you add `?dc=` then a parameter name, it automatically clicks on a different page element depending on the parameter name. For example, according to the code below, if you type `https://www.lovesac.com/how-to?dc=sactionals-cover`, the page will open, then the "Covering Your Sactionals" link will be clicked the second the page loads.
+```js
+if (dynamicContent == 'sactionals-cover') {
+
+  $('#sactionals-cover').click();
+  
+} else if (dynamicContent == 'sactionals-setup'){
+
+  $('#sactionals-setup').click();
+  
+} else if (dynamicContent == 'sac-unpack') {
+
+  $('#sac-unpack').click();
+  
+} else if (dynamicContent == 'sac-fluffing') {
+
+  $('#sac-fluffing').click();
+  
+}
+```
+Adding more dynamic content just involves adding another `else if` to the conditional statement. Just copy and paste in an existing one after the closing bracket of the previous part of the conditional, change the `dynamicContent == '{whatever}'` to a name of your choice (kebab-case please), and change the selector tied to its `.click()` method to the link ID of your choice.
